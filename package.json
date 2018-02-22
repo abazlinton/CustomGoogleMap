@@ -1,0 +1,22 @@
+{
+  "name": "googlemaps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "build": "webpack -w",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "webpack": "^3.11.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "google-maps": "^3.2.1"
+  }
+}
