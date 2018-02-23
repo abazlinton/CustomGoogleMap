@@ -4,7 +4,7 @@ class CustomGoogleMapFactory {
     this.GoogleMap = GoogleMap;
   }
 
-  getMap(el, options){
+  createMap(el, options){
     class CustomGoogleMap extends this.GoogleMap {
 
       constructor(el, options){

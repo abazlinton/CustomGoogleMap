@@ -17,9 +17,8 @@ const app = function(GoogleMap){
     }
   }
   const customGoogleMapFactory = new CustomGoogleMapFactory(GoogleMap)
-  const customGoogleMap = customGoogleMapFactory.getMap(el, options)
+  const customGoogleMap = customGoogleMapFactory.createMap(el, options)
   console.log(customGoogleMap)
-  debugger
 }
 
 document.addEventListener('DOMContentLoaded', init);
