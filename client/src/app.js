@@ -16,9 +16,10 @@ const app = function(GoogleMap){
       lng: -3.1883
     }
   }
-  const customGoogleMap = CustomGoogleMapFactory(GoogleMap, el, options)
+  const customGoogleMapFactory = new CustomGoogleMapFactory(GoogleMap)
+  const customGoogleMap = customGoogleMapFactory.getMap(el, options)
   console.log(customGoogleMap)
-
+  debugger
 }
 
 document.addEventListener('DOMContentLoaded', init);
