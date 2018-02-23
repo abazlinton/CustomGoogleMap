@@ -1,4 +1,4 @@
-import CustomGoogleMapClassFactory from './CustomGoogleMapClassFactory'
+import CustomGoogleMapFactory from './CustomGoogleMapFactory'
 import GoogleMapsLoader from 'google-maps';
 
 const init = function(){
@@ -12,12 +12,11 @@ const app = function(GoogleMap){
   const options = {
     zoom: 10,
     center: {
-      lat: 50,
-      lng: 50
+      lat: 55.9533,
+      lng: -3.1883
     }
   }
-  const CustomGoogleMap = CustomGoogleMapClassFactory(GoogleMap)
-  const customGoogleMap = new CustomGoogleMap(el, options)
+  const customGoogleMap = CustomGoogleMapFactory(GoogleMap, el, options)
   console.log(customGoogleMap)
 
 }
