@@ -1,16 +1,12 @@
-var express = require('express');
-var app = express();
-var path = require('path')
-
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/client/build/index.html'));
-});
+const express = require('express');
+const app = express();
+const path = require('path')
 
 app.use(express.static('client/build'));
 
-var server = app.listen(3000, function () {
-  var host = server.address().address;
-  var port = server.address().port;
+const server = app.listen(3000, function () {
+  const host = server.address().address;
+  const port = server.address().port;
 
   console.log('app listening at http://%s:%s', host, port);
 });

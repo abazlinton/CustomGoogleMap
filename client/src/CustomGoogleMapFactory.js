@@ -22,6 +22,4 @@ class CustomGoogleMapFactory {
   }
 }
 
-
-
 export default CustomGoogleMapFactory
