@@ -12,12 +12,33 @@ class CustomGoogleMapFactory {
         this.markers = []
       }
 
-      addMarker(){
-        this.markers.push(new google.maps.Marker())
+      addMarker(coords){
+        const marker = new google.maps.Marker({
+          position: coords,
+          map: this,
+          animation: google.maps.Animation.DROP
+        });
+        this.markers.push(marker);
+        return marker
+      }
+
+      addMarkerWithInfoWindowPopup(coords, text){
+        const marker = this.addMarker(coords);
+        marker.addListener('click', function () {
+          const infoWindow = new google.maps.InfoWindow({
+            content: text
+          });
+          infoWindow.open(this, marker);
+        });
+      }
+
+      bounceMarkers(){
+        this.markers.forEach(function(marker) {
+          marker.setAnimation(google.maps.Animation.BOUNCE)
+        })
       }
 
     }
-
     return new CustomGoogleMap(el, options)
   }
 }

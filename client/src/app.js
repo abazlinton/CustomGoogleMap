@@ -19,6 +19,11 @@ const app = function(GoogleMap){
   const customGoogleMapFactory = new CustomGoogleMapFactory(GoogleMap)
   const customGoogleMap = customGoogleMapFactory.createMap(el, options)
   console.log(customGoogleMap)
+  customGoogleMap.addMarkerWithInfoWindowPopup({
+    lat: 55.9533,
+    lng: -3.1883
+  }, 'Edinburgh YO!')
+  customGoogleMap.bounceMarkers()
 }
 
 document.addEventListener('DOMContentLoaded', init);
