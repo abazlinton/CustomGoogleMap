@@ -1,10 +1,10 @@
 import CustomGoogleMapFactory from './CustomGoogleMapFactory'
-import GoogleMapsLoader from 'google-maps';
+import GoogleMapsLoader from 'google-maps'
 
 const init = function(){
   GoogleMapsLoader.load(function(google) {
       app(google.maps.Map);
-  });
+  })
 }
 
 const app = function(GoogleMap){
@@ -19,11 +19,8 @@ const app = function(GoogleMap){
   const customGoogleMapFactory = new CustomGoogleMapFactory(GoogleMap)
   const customGoogleMap = customGoogleMapFactory.createMap(el, options)
   console.log(customGoogleMap)
-  customGoogleMap.addMarkerWithInfoWindowPopup({
-    lat: 55.9533,
-    lng: -3.1883
-  }, 'Edinburgh YO!')
+  customGoogleMap.addMarkerWithInfoWindowPopup(options.center, 'Edinburgh YO!')
   customGoogleMap.bounceMarkers()
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', init)

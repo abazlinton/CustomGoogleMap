@@ -18,7 +18,7 @@ class CustomGoogleMapFactory {
           map: this,
           animation: google.maps.Animation.DROP
         });
-        this.markers.push(marker);
+        this.markers.push(marker)
         return marker
       }
 
@@ -27,9 +27,9 @@ class CustomGoogleMapFactory {
         marker.addListener('click', function () {
           const infoWindow = new google.maps.InfoWindow({
             content: text
-          });
-          infoWindow.open(this, marker);
-        });
+          })
+          infoWindow.open(this, marker)
+        })
       }
 
       bounceMarkers(){
