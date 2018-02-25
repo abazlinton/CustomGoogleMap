@@ -10,12 +10,16 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "awesome-typescript-loader": "^3.5.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.7.2",
     "webpack": "^3.11.0"
   },
   "dependencies": {
+    "@types/googlemaps": "^3.30.7",
     "express": "^4.16.2",
     "google-maps": "^3.2.1"
   }

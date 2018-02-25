@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+      "outDir": "./client/ts",
+      "allowJs": true,
+      "target": "es5",
+      "module": "commonjs",
+      "moduleResolution": "node",
+      "noImplicitReturns": true
+  },
+  "include": [
+      "./client/src/*"
+  ],
+  "ignore": [
+    "node_modules",
+    "bundle.js"
+  ]
+  
+}
